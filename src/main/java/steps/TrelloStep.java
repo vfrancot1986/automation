@@ -1,12 +1,22 @@
+package steps;
+
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
+import org.junit.Assert;
+import pom.LoginPage;
 
 public class TrelloStep {
+    LoginPage loginPage;
+
     @Dado("^que esteja logado no trello$")
     public void queEstejaLogadoNoTrello() throws Throwable {
-        System.out.println("queEstejaLogadoNoTrello");
+        loginPage = new LoginPage();
+        loginPage.access();
+        loginPage.doLogin("AlexVillanova", "qwe123");
+        Assert.assertEquals("Página Inicial do Trello",
+                loginPage.checkInitialPage());
     }
 
     @E("^acesse o board$")
