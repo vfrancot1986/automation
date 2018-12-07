@@ -13,7 +13,7 @@ import java.util.List;
 import static util.Tools.waitBy;
 
 public class BoardPage {
-    @FindBy(how = How.XPATH, using = "//a[@class='board-header-btn board-header-btn-name js-rename-board']")
+    @FindBy(how = How.XPATH, using = "//a[@class='board-header-btn board-header-btn-name no-edit']")
     private WebElement boardName;
     @FindBy(how=How.XPATH, using = "//div[div[textarea[@aria-label='To Do']]]/a[@class='open-card-composer js-open-card-composer']")
     private WebElement toDoList;

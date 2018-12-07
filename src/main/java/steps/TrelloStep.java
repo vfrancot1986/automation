@@ -16,7 +16,7 @@ public class TrelloStep {
     public void queEstejaLogadoNoTrello(){
         loginPage = new LoginPage();
         loginPage.access();
-        loginPage.doLogin("email@email.com", "senha123");
+        loginPage.doLogin("vinicius.ts.franco@gmail.com", "Senh@001");
         Assert.assertEquals("Página Inicial do Trello",loginPage.checkInitialPage());
     }
 
