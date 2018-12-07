@@ -1,4 +1,4 @@
-package steps;
+package steps.ui;
 
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
